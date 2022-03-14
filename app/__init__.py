@@ -1,5 +1,4 @@
 from flask import Flask, session
-from config import Config
 from flask_bootstrap import Bootstrap
 from flask_session import Session
 import os
