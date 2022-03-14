@@ -120,7 +120,7 @@ def std(string):
 
 def decide():
     index = randrange(beg,end)
-    row = players[500]
+    row = players[index]
     player = row[1]
     found = False
     for item in playerData:
