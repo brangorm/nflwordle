@@ -82,7 +82,7 @@ def isHardPlayer(player):
     for row in players:
         i += 1
         if std(row[1]) == std(player): break
-    if i > 450: return True
+    if i > 300: return True
     else: return False
 
 def getTeam(player):
