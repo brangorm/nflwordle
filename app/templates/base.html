@@ -4,7 +4,7 @@
         {% if title %}
         <title>{{ title }}</title>
         {% else %}
-        <title>Wardle</title>
+        <title>NFL Wordle</title>
         {% endif %}
 		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.css') }}">
 		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/grid.css') }}">
@@ -13,12 +13,13 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Wardle</a>
+				<a class="navbar-brand" href="#" style = "color:white">Wardle</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li> <a href="{{ url_for('play') }}">Play</a></li>
 				<li> <a href="{{ url_for('howtoplay') }}">How to play</a></li>
 				<li> <a href="{{ url_for('divisions') }}">NFL divisions</a></li>
+				<li> <a href="">Created by Brandon Gormley </a> </li>
 			</ul>
 		</div>
 	</nav>
