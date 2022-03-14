@@ -4,6 +4,10 @@
 	<h1 align="center"> <b> JAYLEN WARDLE </b> </h1>
     <form method="post" novalidate>
         {{ form.hidden_tag() }}
+		<p>
+			{{ diffForm.diffField.label}} <br>
+			{{ diffForm.diffField }}
+		</p>
         <p align="center"> 
             {{ form.guess.label }}:<br>
             {{ form.guess() }}

@@ -118,7 +118,7 @@ def std(string):
     return expr.sub('', string).lower()
 
 
-def decide():
+def decide(beg, end):
     index = randrange(beg,end)
     row = players[index]
     player = row[1]
