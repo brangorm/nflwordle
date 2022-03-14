@@ -1,0 +1,371 @@
+Rank,Player,Team,Position,Points,Games,Avg,Teams
+2,Justin Herbert,LAC,QB,395.6,17,23.3,LAC
+3,Tom Brady,TB,QB,386.7,17,22.8,"NE, TB"
+4,Patrick Mahomes II,KC,QB,374.2,17,22,KC
+5,Matthew Stafford,LAR,QB,346.8,17,20.4,"DET, LAR"
+6,Aaron Rodgers,GB,QB,336.3,16,21,GB
+7,Jonathan Taylor,IND,RB,333.1,17,19.6,IND
+8,Dak Prescott,DAL,QB,330.4,16,20.7,DAL
+9,Joe Burrow,CIN,QB,328.1,16,20.5,CIN
+10,Jalen Hurts,PHI,QB,321.2,15,21.4,PHI
+11,Kyler Murray,ARI,QB,310.5,14,22.2,ARI
+2,Justin Herbert,LAC,QB,395.6,17,23.3,LAC
+3,Tom Brady,TB,QB,386.7,17,22.8,"NE, TB"
+4,Patrick Mahomes II,KC,QB,374.2,17,22,KC
+5,Matthew Stafford,LAR,QB,346.8,17,20.4,"DET, LAR"
+6,Aaron Rodgers,GB,QB,336.3,16,21,GB
+7,Jonathan Taylor,IND,RB,333.1,17,19.6,IND
+8,Dak Prescott,DAL,QB,330.4,16,20.7,DAL
+9,Joe Burrow,CIN,QB,328.1,16,20.5,CIN
+10,Jalen Hurts,PHI,QB,321.2,15,21.4,PHI
+11,Kyler Murray,ARI,QB,310.5,14,22.2,ARI
+13,Cooper Kupp,LAR,WR,294.5,17,17.3,LAR
+14,Ryan Tannehill,TEN,QB,282.3,17,16.6,"MIA, TEN"
+15,Austin Ekeler,LAC,RB,273.8,16,17.1,LAC
+17,Carson Wentz,IND,QB,264.9,17,15.6,"PHI, IND"
+18,Deebo Samuel,SF,WR,262,16,16.4,SF
+19,Lamar Jackson,BAL,QB,253,12,21.1,BAL
+20,Russell Wilson,SEA,QB,248.7,14,17.8,SEA
+21,Joe Mixon,CIN,RB,245.9,16,15.4,CIN
+22,Jimmy Garoppolo,SF,QB,239.5,15,16,"NE, SF"
+23,Mac Jones,NE,QB,238,17,14,NE
+24,Taylor Heinicke,WAS,QB,236.7,16,14.8,"MIN, HOU, CAR, WAS"
+25,Matt Ryan,ATL,QB,234.8,17,13.8,ATL
+26,Ben Roethlisberger,PIT,QB,228,16,14.3,PIT
+29,Justin Jefferson,MIN,WR,222.4,17,13.1,MIN
+30,Davante Adams,GB,WR,221.3,16,13.8,GB
+31,James Conner,ARI,RB,220.7,15,14.7,"PIT, ARI"
+32,Trevor Lawrence,JAC,QB,216,17,12.7,JAC
+33,Teddy Bridgewater,DEN,QB,209.8,14,15,"MIN, NO, CAR, DEN"
+34,Ezekiel Elliott,DAL,RB,205.1,17,12.1,DAL
+35,Jared Goff,DET,QB,202.4,14,14.5,"LAR, DET"
+36,Nick Chubb,CLE,RB,195.3,14,14,CLE
+37,Mark Andrews,BAL,TE,194.1,17,11.4,BAL
+38,Baker Mayfield,CLE,QB,193.8,14,13.8,CLE
+39,Damien Harris,NE,RB,192.1,15,12.8,NE
+40,Tua Tagovailoa,MIA,QB,190.9,13,14.7,MIA
+41,Mike Evans,TB,WR,188.5,16,11.8,TB
+42,Alvin Kamara,NO,RB,187.7,13,14.4,NO
+43,Antonio Gibson,WAS,RB,187.1,16,11.7,NO
+44,Leonard Fournette,TB,RB,186.6,14,13.3,"JAC, TB"
+45,Tyreek Hill,KC,WR,185.5,17,10.9,KC
+48,Stefon Diggs,BUF,WR,182.5,17,10.7,"MIN, BUF"
+49,Aaron Jones,GB,RB,177,15,11.8,GB
+50,Derrick Henry,TEN,RB,175.3,8,21.9,TEN
+53,Dalvin Cook,MIN,RB,172.3,13,13.3,MIN
+56,Travis Kelce,KC,TE,170.8,16,10.7,KC
+57,Mike Williams,LAC,WR,170.6,16,10.7,LAC
+60,Tyler Lockett,SEA,WR,168.4,16,10.5,SEA
+61,Diontae Johnson,PIT,WR,167.4,16,10.5,PIT
+63,Davis Mills,HOU,QB,167,13,12.9,HOU
+65,Chris Boswell,PIT,K,162,17,9.5,PIT
+65,Justin Tucker,BAL,K,162,17,9.5,BAL
+67,Javonte Williams,DEN,RB,161.9,17,9.5,DEN
+69,Matt Gay,LAR,K,159,17,9.4,"TB, LAR"
+70,Devin Singletary,BUF,RB,157.8,17,9.3,BUF
+72,Greg Joseph,MIN,K,156,17,9.2,"CLE, TEN, TB, MIN"
+74,Evan McPherson,CIN,K,154,16,9.6,CIN
+74,Matt Prater,ARI,K,154,17,9.1,"DEN, DET, ARI"
+74,David Montgomery,CHI,RB,154,14,11,CHI
+77,CeeDee Lamb,DAL,WR,153.8,16,9.6,DAL
+80,Michael Pittman Jr.,IND,WR,150.6,17,8.9,"ARI, TB, DEN"
+81,Jake Elliott,PHI,K,150,17,8.8,PHI
+83,Darrel Williams,KC,RB,149,17,8.8,KC
+87,Tee Higgins,CIN,WR,145.1,14,10.4,CIN
+90,Chris Godwin,TB,WR,144.4,14,10.3,TB
+91,Tyler Bass,BUF,K,143,17,8.4,BUF
+93,Brandin Cooks,HOU,WR,141.8,16,8.9,"NO, NE, LAR, HOU"
+94,Jaylen Waddle,MIA,WR,141.8,16,8.9,MIA
+96,Harrison Butker,KC,K,140,16,8.8,KC
+98,Darnell Mooney,CHI,WR,138.7,17,8.2,CHI
+99,Ryan Succop,TB,K,138,17,8.1,"KC, TEN, TB"
+102,Justin Fields,CHI,QB,136.9,12,11.4,CHI
+104,Marquise Brown,BAL,WR,135.3,16,8.5,BAL
+106,Darrell Henderson Jr.,LAR,RB,134.4,12,11.2,LAR
+107,Mason Crosby,GB,K,134,17,7.9,GB
+108,Adam Thielen,MIN,WR,132.8,13,10.2,MIN
+110,Dalton Schultz,DAL,TE,130.8,17,7.7,DAL
+111,Christian Kirk,ARI,WR,130.6,17,7.7,ARI
+113,Brandon McManus,DEN,K,129,17,7.6,DEN
+114,George Kittle,SF,TE,127,14,9.1,SF
+116,Kendrick Bourne,NE,WR,125.5,17,7.4,"SF, NE"
+117,Sony Michel,LAR,RB,125.3,17,7.4,"NE, LAR"
+118,Younghoe Koo,ATL,K,125,17,7.4,"LAC, ATL"
+119,Myles Gaskin,MIA,RB,124.6,17,7.3,MIA
+121,Tony Pollard,DAL,RB,123.6,15,8.2,DAL
+124,Taysom Hill,NO,QB,122.8,12,10.2,NO
+125,DeVonta Smith,PHI,WR,121.6,17,7.2,PHI
+127,Jameis Winston,NO,QB,120.3,7,17.2,"TB, NO"
+130,Van Jefferson,LAR,WR,118.2,17,7,LAR
+134,Tyler Boyd,CIN,WR,116.8,16,7.3,CIN
+135,Rob Gronkowski,TB,TE,116.2,12,9.7,"NE, TB"
+136,Cairo Santos,CHI,K,116,17,6.8,"KC, CHI, TB, TEN"
+137,Rashaad Penny,SEA,RB,115.7,10,11.6,SEA
+138,Dawson Knox,BUF,TE,115.1,15,7.7,BUF
+139,Jason Sanders,MIA,K,115,17,6.8,MIA
+140,Brandon Aiyuk,SF,WR,114.3,17,6.7,SF
+142,Devonta Freeman,BAL,RB,112.6,16,7,"ATL, BUF, BAL"
+143,Chuba Hubbard,CAR,RB,112.6,16,7,CAR
+147,Dallas Goedert,PHI,TE,109,15,7.3,PHI
+148,Kyle Pitts,ATL,TE,108.6,17,6.4,ATL
+151,Chase Claypool,PIT,WR,107.6,15,7.2,PIT
+153,Marvin Jones Jr.,JAC,WR,107.2,17,6.3,"CIN, DET, JAC"
+154,Zach Ertz,Multi,TE,106.7,17,6.3,"PHI, ARI"
+155,Marquez Callaway,NO,WR,105.8,17,6.2,NO
+156,DeAndre Hopkins,ARI,WR,105.2,10,10.5,"HOU, ARI"
+161,Tim Patrick,DEN,WR,103.4,16,6.5,DEN
+162,Jakobi Meyers,NE,WR,103.3,16,6.5,NE
+163,Cedrick Wilson Jr.,DAL,WR,102.8,14,7.3,"SF, PIT"
+165,Allen Lazard,GB,WR,102.5,14,7.3,GB
+167,Rhamondre Stevenson,NE,RB,100.9,12,8.4,NE
+168,Chase Edmonds,ARI,RB,100.3,12,8.4,ARI
+169,Joey Slye,Multi,K,100,12,8.3,"CAR, WAS"
+170,Zane Gonzalez,CAR,K,98,12,8.2,"CLE, ARI, CAR"
+172,Russell Gage,ATL,WR,97,13,7.5,ATL
+175,Mike Davis,ATL,RB,94.2,17,5.5,"SF, SEA, CAR, ATL"
+176,Alexander Mattison,MIN,RB,93.9,16,5.9,MIN
+177,Jamaal Williams,DET,RB,93.8,13,7.2,"GB, DET"
+180,Andy Dalton,CHI,QB,93.1,8,11.6,"CIN, DAL, CHI"
+182,Courtland Sutton,DEN,WR,92.2,17,5.4,DEN
+183,Robert Woods,LAR,WR,92.2,9,10.2,"BUF, LAR"
+184,Mike Gesicki,MIA,TE,92,17,5.4,MIA
+186,Pat Freiermuth,PIT,TE,91.7,16,5.7,PIT
+187,Cam Newton,CAR,QB,91.3,8,11.4,"CAR, NE"
+188,Miles Sanders,PHI,RB,91.2,12,7.6,PHI
+189,Noah Fant,DEN,TE,91,16,5.7,DEN
+190,Gabriel Davis,BUF,WR,90.9,15,6.1,BUF
+191,Christian McCaffrey,CAR,RB,90.5,7,12.9,CAR
+192,Kenneth Gainwell,PHI,RB,90.4,16,5.7,PHI
+193,Emmanuel Sanders,BUF,WR,89.7,14,6.4,"PIT, DEN, SF, NO, BUF"
+195,Kareem Hunt,CLE,RB,88,8,11,"KC, CLE"
+196,Matthew Wright,JAC,K,87,14,6.2,"PIT, JAC"
+198,Tyler Huntley,BAL,QB,86.7,7,12.4,BAL
+198,Tyrod Taylor,HOU,QB,86.7,6,14.5,"BAL, BUF, CLE, LAC, HOU"
+200,Tyler Higbee,LAR,TE,86,15,5.7,LAR
+202,Boston Scott,PHI,RB,85.6,11,7.8,PHI
+209,Byron Pringle,KC,WR,84.8,16,5.3,KC
+213,Brandon Bolden,NE,RB,83.1,16,5.2,"NE, MIA"
+215,Zack Moss,BUF,RB,82.2,13,6.3,BUF
+216,Mecole Hardman,KC,WR,81.9,17,4.8,KC
+217,Mark Ingram II,Multi,RB,81.6,14,5.8,"NO, BAL"
+218,Jarvis Landry,CLE,WR,81,12,6.8,"MIA, CLE"
+219,Rex Burkhead,HOU,RB,79.3,15,5.3,"CIN, NE, HOU"
+221,Antonio Brown,TB,WR,79.1,7,11.3,"PIT, NE, TB"
+224,Tyler Conklin,MIN,TE,77.3,17,4.6,MIN
+225,Cole Beasley,BUF,WR,77.3,16,4.8,"DAL, BUF"
+227,Jacoby Brissett,MIA,QB,76.4,11,7,"NE, IND, MIA"
+230,Bryan Edwards,LV,WR,75.1,16,4.7,LV
+231,Quez Watkins,PHI,WR,73,17,4.3,PHI
+232,Nyheim Hines,IND,RB,72.6,17,4.3,IND
+233,Kenyan Drake,LV,RB,72.5,12,6,"MIA, ARI, LV"
+234,David Njoku,CLE,TE,71.6,15,4.8,CLE
+236,Gerald Everett,SEA,TE,69.8,15,4.7,"LAR, SEA"
+238,Ronald Jones II,TB,RB,69.2,15,4.6,TB
+241,Nelson Agholor,NE,WR,66.4,15,4.4,"PHI, LV, NE"
+242,Jalen Guyton,LAC,WR,66.2,16,4.1,LAC
+243,Randall Cobb,GB,WR,65.6,11,6,"GB, DAL, HOU"
+246,Khalil Herbert,CHI,RB,64.9,16,4.1,CHI
+247,Justin Jackson,LAC,RB,64.2,14,4.6,LAC
+250,DeVante Parker,MIA,WR,63.5,10,6.4,MIA
+251,DeAndre Carter,WAS,WR,62.5,17,3.7,"HOU, CHI, WAS"
+252,Brett Maher,NO,K,62,8,7.8,"DAL, ARI, NO"
+253,Freddie Swain,SEA,WR,61.5,17,3.6,SEA
+254,Cole Kmet,CHI,TE,61.2,17,3.6,CHI
+257,Jordan Howard,PHI,RB,60.5,7,8.6,"CHI, PHI"
+259,Alex Collins,SEA,RB,59.8,11,5.4,"SEA, BAL"
+260,Riley Patterson,DET,K,59,7,8.4,DET
+262,Olamide Zaccheaus,ATL,WR,58.8,15,3.9,ATL
+264,Jauan Jennings,SF,WR,58.2,13,4.5,SF
+267,Rashod Bateman,BAL,WR,57.5,12,4.8,BAL
+269,Michael Gallup,DAL,WR,56.5,9,6.3,DAL
+270,Zach Pascal,IND,WR,56.5,16,3.5,IND
+277,Rondale Moore,ARI,WR,55.1,14,3.9,ARI
+278,Duke Johnson Jr.,MIA,RB,55.1,5,11,"CLE, HOU, MIA"
+280,Austin Hooper,CLE,TE,54.5,15,3.6,"ATL, CLE"
+281,Dontrell Hilliard,TEN,RB,53.7,8,6.7,"CLE, HOU, TEN"
+282,Drew Lock,DEN,QB,52.8,6,8.8,DEN
+285,Jamal Agnew,JAC,WR,52,12,4.3,"DET, JAC"
+286,Josh Reynolds,Multi,WR,51.6,11,4.7,"LAR, DET"
+287,Ameer Abdullah,Multi,RB,51.5,17,3,"DET, MIN, CAR"
+290,Nico Collins,HOU,WR,50.6,14,3.6,HOU
+291,Jack Doyle,IND,TE,50.2,15,3.4,IND
+292,Julio Jones,TEN,WR,49.4,10,4.9,"ATL, TEN"
+293,Laquon Treadwell,JAC,WR,49.4,12,4.1,"MIN, ATL, JAC"
+294,David Johnson,HOU,RB,49.3,13,3.8,"ARI, HOU"
+295,Allen Robinson II,CHI,WR,49,12,4.1,"JAC, CHI"
+296,Cameron Brate,TB,TE,48.5,16,3,TB
+299,Jerry Jeudy,DEN,WR,47,10,4.7,DEN
+300,Mack Hollins,MIA,WR,46.3,16,2.9,"PHI, MIA"
+301,Jaret Patterson,WAS,RB,45.9,14,3.3,WAS
+302,Travis Homer,SEA,RB,45.8,14,3.3,SEA
+303,Jeremy McNichols,TEN,RB,45.6,13,3.5,"SF, TEN, JAC"
+304,Jalen Reagor,PHI,WR,45.1,17,2.7,PHI
+305,Rodrigo Blankenship,IND,K,45,5,9,IND
+307,Damien Williams,CHI,RB,44.7,12,3.7,"MIA, KC, CHI"
+308,Jeff Wilson Jr.,SF,RB,44.5,9,4.9,SF
+309,Demarcus Robinson,KC,WR,44.4,15,3,KC
+310,Devin Duvernay,BAL,WR,44.2,16,2.8,BAL
+311,Kyle Juszczyk,SF,RB,43.8,15,2.9,"BAL, SF"
+312,Sammy Watkins,BAL,WR,43.4,11,4,"BUF, LAR, KC, BAL"
+314,Albert Okwuegbunam,DEN,TE,43,14,3.1,DEN
+315,Chris Conley,HOU,WR,42.6,14,3,"KC, JAC, HOU"
+318,Chris Carson,SEA,RB,42.1,4,10.5,SEA
+319,Austin Seibert,DET,K,42,6,7,"CLE, CIN, DET"
+321,James Washington,PIT,WR,41.8,15,2.8,PIT
+323,Phillip Lindsay,Multi,RB,41.4,14,3,"DEN, MIA"
+324,Harrison Bryant,CLE,TE,41.3,15,2.8,CLE
+326,Dan Arnold,Multi,TE,40.8,11,3.7,"NO, ARI, JAC"
+328,Calvin Ridley,ATL,WR,40.1,5,8,ATL
+329,Peyton Barber,LV,RB,39.9,10,4,"TB, WAS, LV"
+330,Juwan Johnson,NO,TE,39.9,13,3.1,NO
+331,Jonnu Smith,NE,TE,39.4,16,2.5,"TEN, NE"
+332,DeeJay Dallas,SEA,RB,39.1,17,2.3,SEA
+332,Anthony Firkser,TEN,TE,39.1,15,2.6,TEN
+335,Geoff Swaim,TEN,TE,39,16,2.4,"DAL, JAC, TEN"
+337,Damiere Byrd,CHI,WR,38.9,11,3.5,"CAR, ARI, NE, CHI"
+338,Antoine Wesley,ARI,WR,38.8,8,4.9,"BAL, ARI"
+339,Adam Humphries,WAS,WR,38.3,17,2.3,"TB, TEN, WAS"
+340,Hayden Hurst,ATL,TE,38.1,12,3.2,"BAL, ATL"
+340,Ryan Griffin,NYJ,TE,38.1,14,2.7,"NO, TB"
+343,Marquise Goodwin,CHI,WR,37.2,14,2.7,"BUF, SF, PHI, CHI"
+346,Jimmy Graham,CHI,TE,36.7,11,3.3,"NO, SEA, GB, CHI"
+347,Josiah Deguara,GB,TE,36.5,14,2.6,GB
+348,Adam Trautman,NO,TE,36.3,11,3.3,NO
+349,Giovani Bernard,TB,RB,36.1,10,3.6,"CIN, TB"
+350,Durham Smythe,MIA,TE,36,16,2.3,MIA
+350,Tyler Johnson,TB,WR,36,16,2.3,TB
+352,Brevin Jordan,HOU,TE,35.8,8,4.5,HOU
+353,Matt Breida,BUF,RB,35.7,7,5.1,"SF, MIA, BUF"
+354,Logan Thomas,WAS,TE,35.6,5,7.1,"ARI, MIA, BUF, DET, WAS"
+355,Chester Rogers,TEN,WR,35,16,2.2,"IND, TEN"
+356,Chris Evans,CIN,RB,34.8,9,3.9,CIN
+357,Chris Moore,HOU,WR,34.7,10,3.5,"BAL, HOU"
+358,Gardner Minshew II,PHI,QB,34.6,3,11.5,"JAC, PHI"
+358,Cyril Grayson Jr.,TB,WR,34.6,3,11.5,"CHI, TB"
+360,MyCole Pruitt,TEN,TE,34.5,13,2.7,"MIN, CHI, HOU, TEN"
+361,Quintez Cephus,DET,WR,34.4,5,6.9,DET
+363,Carlos Hyde,JAC,RB,33.8,12,2.8,"SF, JAC, HOU, SEA"
+365,Rashard Higgins,CLE,WR,33.5,12,2.8,CLE
+366,Tommy Tremble,CAR,TE,33.1,15,2.2,CAR
+368,Malik Turner,DAL,WR,32.9,7,4.7,"SEA, DAL"
+371,Demetric Felton,CLE,RB,32.5,15,2.2,CLE
+371,Ashton Dulin,IND,WR,32.5,16,2,IND
+371,Isaiah McKenzie,BUF,WR,32.5,15,2.2,"DEN, BUF"
+374,Robert Tonyan,GB,TE,32.4,8,4.1,GB
+375,Brandon Zylstra,CAR,WR,31,12,2.6,"MIN, CAR"
+376,John Bates,WAS,TE,30.9,13,2.4,WAS
+377,Tim Boyle,DET,QB,30.4,4,7.6,"GB, DET"
+380,Will Dissly,SEA,TE,29.1,13,2.2,SEA
+381,Tristan Vizcaino,LAC,K,29,6,4.8,"BUF, LAC"
+382,Jakeem Grant Sr.,Multi,WR,28.5,15,1.9,"MIA, CHI"
+383,Craig Reynolds,DET,RB,28.2,5,5.6,"ATL, JAC, DET"
+384,Isaiah Ford,MIA,WR,28.1,9,3.1,MIA
+385,Greg Ward,PHI,WR,27.6,10,2.8,PHI
+390,Salvon Ahmed,MIA,RB,26.6,11,2.4,MIA
+391,JaMycal Hasty,SF,RB,26.5,11,2.4,SF
+393,Trey Sermon,SF,RB,25.3,6,4.2,SF
+394,Maxx Williams,ARI,TE,25.3,5,5.1,"BAL, ARI"
+395,Cooper Rush,DAL,QB,25.1,4,6.3,DAL
+396,Royce Freeman,Multi,RB,24.6,12,2.1,"DEN, HOU"
+397,Jordan Love,GB,QB,24.2,6,4,GB
+399,Brock Wright,DET,TE,23.7,8,3,DET
+401,Kendall Hinton,DEN,WR,23.5,11,2.1,DEN
+402,Anthony Schwartz,CLE,WR,23.4,13,1.8,CLE
+404,Albert Wilson,MIA,WR,23,10,2.3,"KC, MIA"
+404,Tajae Sharpe,ATL,WR,23,14,1.6,"TEN, KC, ATL"
+406,Jerick McKinnon,KC,RB,22.9,9,2.5,"MIN, SF, KC"
+407,Corey Clement,DAL,RB,22.9,11,2.1,"PHI, DAL"
+409,Stephen Anderson,LAC,TE,22.5,14,1.6,"HOU, NE, LAC"
+411,Parris Campbell,IND,WR,22.2,6,3.7,IND
+412,Eno Benjamin,ARI,RB,22,8,2.8,ARI
+414,Jermar Jefferson,DET,RB,21.7,5,4.3,DET
+415,Blake Jarwin,DAL,TE,21.6,8,2.7,DAL
+416,Marcedes Lewis,GB,TE,21.4,13,1.7,"JAC, GB"
+417,Eric Ebron,PIT,TE,20.5,8,2.6,"DET, IND, PIT"
+418,James Proche II,BAL,WR,20.2,7,2.9,BAL
+419,Lirim Hajrullahu,Multi,K,20,4,5,CAR
+423,Mason Rudolph,PIT,QB,19.4,2,9.7,PIT
+424,Nick Vannett,NO,TE,19.3,7,2.8,"SEA, PIT, DEN, NO"
+425,James White,NE,RB,19.2,3,6.4,NE
+426,Kene Nwangwu,MIN,RB,19,9,2.1,MIN
+427,Ian Thomas,CAR,TE,18.8,14,1.3,CAR
+428,Noah Brown,DAL,WR,18.4,10,1.8,DAL
+431,Jordan Akins,HOU,TE,17.7,12,1.5,HOU
+431,KhaDarel Hodge,DET,WR,17.7,12,1.5,"LAR, CLE, DET"
+431,Mohamed Sanu Sr.,SF,WR,17.7,8,2.2,"CIN, ATL, NE, DET, SF"
+435,Elliott Fry,Multi,K,17,3,5.7,"ATL, CIN"
+439,Jonathan Williams,WAS,RB,16.7,5,3.3,"BUF, NO, IND, WAS"
+439,Zach Gentry,PIT,TE,16.7,10,1.7,PIT
+439,Jody Fortson,KC,WR,16.7,4,4.2,KC
+443,Kristian Wilkerson,NE,WR,16.2,1,16.2,NE
+444,Dyami Brown,WAS,WR,16.1,10,1.6,WAS
+446,Marcus Johnson,TEN,WR,15.8,7,2.3,"PHI, IND, TEN"
+448,Qadree Ollison,ATL,RB,15.7,6,2.6,ATL
+450,Patrick Taylor Jr.,GB,RB,15.2,5,3,GB
+452,Marcus Mariota,LV,QB,14.9,7,2.1,"TEN, LV"
+453,Trent Sherfield,SF,WR,14.7,12,1.2,"ARI, SF"
+457,Jesper Horsted,CHI,TE,14.1,4,3.5,CHI
+459,Godwin Igwebuike,DET,RB,14,9,1.6,"SF, DET"
+462,Brandon Allen,CIN,QB,13.8,5,2.8,"JAC, LAR, DEN, CIN"
+463,Ben Skowronek,LAR,WR,13.3,12,1.1,LAR
+465,Chris Manhertz,JAC,TE,13.1,10,1.3,"CAR, JAC"
+466,Dominik Eberle,HOU,K,13,1,13,"LV, CAR"
+468,Kenny Stills,NO,WR,12.9,7,1.8,"NO, MIA, HOU, BUF"
+469,Patrick Ricard,BAL,RB,12.7,8,1.6,BAL
+472,Tom Kennedy,DET,WR,12.4,7,1.8,DET
+473,Brian Hoyer,NE,QB,12.3,5,2.5,"NE, ARI, CLE, HOU, CHI, IND"
+474,Jesse James,CHI,TE,12.2,5,2.4,"PIT, DET, CHI"
+475,Joshua Kelley,LAC,RB,12,8,1.5,LAC
+477,Jacob Hollister,JAC,TE,11.5,7,1.6,"NE, SEA, JAC"
+478,Equanimeous St. Brown,GB,WR,11.2,12,0.9,GB
+481,Ross Dwelley,SF,TE,11.1,4,2.8,SF
+482,Benny Snell Jr.,PIT,RB,11.1,16,0.7,PIT
+483,Chris Blewitt,WAS,K,11,2,5.5,CLE
+483,Adam Shaheen,MIA,TE,11,9,1.2,"CHI, MIA"
+483,Phillip Dorsett II,Multi,WR,11,5,2.2,"IND, NE, SEA, HOU"
+486,Marlon Mack,IND,RB,10.9,6,1.8,IND
+486,Dez Fitzpatrick,TEN,WR,10.9,3,3.6,TEN
+488,Eric Saubert,DEN,TE,10.7,10,1.1,"ATL, CHI, JAC, DEN"
+489,Antony Auclair,HOU,TE,10.7,4,2.7,"TB, HOU"
+490,Kylen Granson,IND,TE,10.6,10,1.1,IND
+492,Tommy Sweeney,BUF,TE,10.4,7,1.5,BUF
+493,Trinity Benson,DET,WR,10.3,7,1.5,"DEN, DET"
+494,Shi Smith,CAR,WR,10.1,5,2,CAR
+497,Nick Mullens,CLE,QB,9.9,1,9.9,"SF, CLE"
+497,Auden Tate,CIN,WR,9.9,4,2.5,CIN
+499,Blake Bell,KC,TE,9.7,12,0.8,"SF, MIN, JAC, KC, DAL"
+500,Ryquell Armstead,JAC,RB,9.6,2,4.8,JAC
+500,Noah Gray,KC,TE,9.6,7,1.4,KC
+502,Josh Gordon,KC,WR,9.2,9,1,"CLE, NE, SEA, KC"
+503,Mitchell Trubisky,BUF,QB,9.1,5,1.8,"CHI, BUF"
+504,Deon Jackson,IND,RB,9.1,5,1.8,IND
+505,Cameron Batson,TEN,WR,9,4,2.3,TEN
+506,Andy Janovich,CLE,RB,8.9,6,1.5,"DEN, CLE"
+506,JaQuan Hardy,DAL,RB,8.9,2,4.5,DAL
+508,Sean McKeon,DAL,TE,8.7,5,1.7,DAL
+510,Anthony Miller,Multi,WR,8.5,3,2.8,"CHI, PIT"
+511,Alex Armah Jr.,Multi,RB,8.2,10,0.8,"CAR, WAS"
+511,Tyree Jackson,PHI,TE,8.2,3,2.7,PHI
+513,Drew Sample,CIN,TE,8.1,10,0.8,CIN
+513,Dezmon Patmon,IND,WR,8.1,4,2,IND
+515,Kyle Allen,WAS,QB,7.9,2,4,"CAR, WAS"
+516,Preston Williams,MIA,WR,7.8,6,1.3,MIA
+517,Garrett Gilbert,WAS,QB,7.8,1,7.8,"CAR, CLE, DAL, WAS"
+518,Chris Myarick,NYG,TE,7.7,5,1.5,"MIA, CIN"
+521,Johnny Stanton,CLE,RB,7.2,3,2.4,"MIN, CLE"
+522,Dede Westbrook,MIN,WR,6.8,15,0.5,"JAC, MIN"
+523,Jonathan Ward,ARI,RB,6.7,9,0.7,ARI
+524,Josh Oliver,BAL,TE,6.6,11,0.6,"JAC, BAL"
+525,Ito Smith,DAL,RB,6.4,1,6.4,"ATL, DAL"
+525,Dax Milne,WAS,WR,6.4,9,0.7,WAS
+528,Brandon Powell,LAR,WR,6,6,1,"DET, ATL, LAR"
+529,Penny Hart,SEA,WR,5.9,12,0.5,SEA
+530,Mike Boone,DEN,RB,5.7,3,1.9,"MIN, DEN"
+532,Luke Farrell,JAC,TE,5.6,9,0.6,JAC
+532,Amari Rodgers,GB,WR,5.6,16,0.4,GB
+532,Jason Moore Jr.,LAC,WR,5.6,1,5.6,LAC
+535,Trayveon Williams,CIN,RB,5.5,4,1.4,CIN
+535,Alex Erickson,CAR,WR,5.5,17,0.3,"CIN, CAR"
+537,Jaelon Darden,TB,WR,5.4,9,0.6,TB
+539,Charlie Woerner,SF,TE,5.2,8,0.7,SF
+540,Jason Huntley,PHI,RB,5.1,1,5.1,PHI

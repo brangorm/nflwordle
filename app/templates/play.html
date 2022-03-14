@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1 align="center"> <b> JAYLEN WARDLE </b> </h1>
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p align="center"> 
+            {{ form.guess.label }}:<br>
+            {{ form.guess() }}
+        </p>
+		<!-- <p> Answer: {{ answer }} </p> -->
+        <p align="center"> {{ form.submit() }}</p>
+		<p align="center"> {{ form.reset() }} </p>
+		<p>
+		{% for error in form.guess.errors %}
+            <span style="color: red;">[{{ error }}] <br> </span>
+        {% endfor %}
+		
+		{% if lost %}
+		<h3> <b> You lost! The player was {{ answer }}. Press 'submit' to reset and play again. </b> </h3>
+		
+		{% elif found %}
+		<h3> <b> Congratulations! You guessed the player {{ answer }} in {{guesses|length}} guesses. Press 'submit' to reset and play again. </b> </h3>
+		{% endif %}
+		
+		
+		<div class="container show-grid">
+		<div class="row" >
+			<div align="center" class="col-md-1" {% if isHard %} style="background-color: red" {% endif %}> <b> Guess </b> </div>
+			<div align="center" class="col-md-1" {% if isHard %} style="background-color: red" {% endif %}> <b> Conference </b> </div>
+			<div align="center" class="col-md-1" {% if isHard %} style="background-color: red" {% endif %}> <b> Division </b></div>
+			<div align="center" class="col-md-1" {% if isHard %} style="background-color: red" {% endif %}> <b> Team </b></div>
+			<div align="center" class="col-md-1" {% if isHard %} style="background-color: red" {% endif %}> <b> Position </b></div>
+			<div align="center" class="col-md-1" {% if isHard %} style="background-color: red" {% endif %}> <b> Stat {% if stat[0] %} ({{ stat[1] }}) {% endif %}</b></div>
+			<div align="center" class="col-md-1" {% if isHard %} style="background-color: red" {% endif %}> <b> Height </b></div>
+			<div align="center" class="col-md-1" {% if isHard %} style="background-color: red" {% endif %}> <b> Age </b></div>
+			{% if college %}
+			<div class="col-md-1" {% if isHard %} style="background-color: red" {% endif %}> <b> College </b><br></div>
+			{% endif %}
+		</div>
+
+		{% for guess in guesses %}
+		<div class="row">
+			
+			<div align="center" style="background-color: gray;" class="col-md-1">{{ guess.Name }}</div>
+			
+			{% with filepath = "images/confs/" ~ guess.Conference[1] ~ ".png" %}
+			<div align="center" style="background-color: {{ get_color(guess.Conference) }};" class="col-md-1"><img src= "{{ url_for('static',filename=filepath) }}" alt="{{ filepath }}" width="60" height="40" ></div>
+			{% endwith %}
+			
+			<div align="center" style="background-color: {{ get_color(guess.Division) }};" class="col-md-1"> {{ guess.Division[1] }} </div>
+			
+			{% with filepath = "images/teams/" ~ guess.Team[1] ~ ".png" %}
+			<div align="center" style="background-color: {{ get_color(guess.Team) }};" class="col-md-1"><img src= "{{ url_for('static',filename=filepath) }}" alt="{{ filepath }}" width="60" height="40" ></div>
+			{% endwith %}
+			
+			<div align="center" style="background-color: {{ get_color(guess.Position) }};" class="col-md-1"> <p >{{guess.Position[1]}} </p> </div>
+			
+			<div align="center" style="background-color: {{ get_color(guess.Stat) }};" class="col-md-1"> {{guess.Stat[1]}} </div>
+			
+			<div align="center" style="background-color: {{ get_color(guess.Height) }};" class="col-md-1"> {{guess.Height[1]}} </div>
+			
+			<div align="center" style="background-color: {{ get_color(guess.Age) }};" class="col-md-1"> {{guess.Age[1]}} </div>
+			
+			{% if college %}
+			<div align="center" style="background-color: {{ get_color(guess.College) }};" class="col-md-1"> {{guess.College[1]}} </div>
+			{% endif %}
+
+			
+		</div>
+        {% endfor %}
+		</div>
+    </form>
+{% endblock %}
+

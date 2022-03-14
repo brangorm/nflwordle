@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Wardle</title>
+        {% endif %}
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.css') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/grid.css') }}">
+    </head>
+    <body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Wardle</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li> <a href="{{ url_for('play') }}">Play</a></li>
+				<li> <a href="{{ url_for('howtoplay') }}">How to play</a></li>
+				<li> <a href="{{ url_for('divisions') }}">NFL divisions</a></li>
+			</ul>
+		</div>
+	</nav>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>
