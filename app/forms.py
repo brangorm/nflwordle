@@ -46,4 +46,4 @@ class GuessForm(FlaskForm):
 class DifficultyForm(FlaskForm):
     def convert(inp):
         tuple(map(int, inp.split(', ')))
-    diffField = SelectField("Select Difficulty", choices = [("1, 508", "Include all players"), ("1, 76", "Easy"), ("30, 150", "Medium"), ("150, 300", "Hard"), ("300, 508", "Extreme")])#, coerce=convert)
+    diffField = SelectField("Select Difficulty", choices = [("1, 76", "Easy"), ("30, 150", "Medium"), ("150, 300", "Hard"), ("300, 508", "Extreme"), ("1, 508", "Include all players")])#, coerce=convert)
