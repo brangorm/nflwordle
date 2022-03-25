@@ -6,8 +6,8 @@
 		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/grid.css') }}">
 		<link rel="shortcut icon" href="{{ url_for('static',filename='images/favicon.PNG') }}">
     </head>
-    <body>
-	<nav class="navbar navbar-inverse">
+    <body class="main">
+		<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#" style = "color:white">NFL Wordle</a>
@@ -30,5 +30,5 @@
         {% endif %}
         {% endwith %}
         {% block content %}{% endblock %}
-    </body>
+	</body>
 </html>

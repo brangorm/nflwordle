@@ -4,14 +4,43 @@
 	<h1 align="center"> <b> NFL WORDLE </b> </h1>
     <form method="post" novalidate>
         {{ form.hidden_tag() }}
-		<p>
-			{{ diffForm.diffField.label}} <br>
-			{{ diffForm.diffField }}
-		</p>
-        <p align="center">
+        <p align="center" style="color: white;">
             {{ form.guess.label }}:<br>
+		</p>
+		<p align="center">
             {{ form.guess() }}
         </p>
+
+	<div class="sidenav-left">
+		<div class="header"> Settings </div>
+		
+		<div> {{ restrForm.apply() }} </div>
+		
+		<div> {{ diffForm.diffField.label }} <br>
+		{{ diffForm.diffField() }} </div>
+		
+		<div> {{ restrForm.conField.label }} <br>
+		 {{ restrForm.conField() }} </div>
+		
+		<div> {{ restrForm.divField.label }} <br>
+		{{ restrForm.divField() }} </div>
+		
+		<div> {{ restrForm.posField.label }} <br>
+		{{ restrForm.posField(size=10) }} </div>
+	</div>
+	
+	<div class="sidenav-right">
+		<div class="header"> Recent Scores </div>
+		
+		<div> {{ nameForm.name.label }} <br>
+		{{ nameForm.name() }} <br>
+		{{ nameForm.assign() }}</div>
+		{% if name_submit %} <div> Name submitted! </div> {% endif %}
+		
+		{% for score in feed %}
+		<div> {{ score }} </div> <br>
+		{% endfor %}
+	</div>
 
         <p align="center"> {{ form.submit() }}</p>
 		<p align="center"> {{ form.reset() }} </p>
@@ -19,12 +48,19 @@
 		{% for error in form.guess.errors %}
             <span style="color: red;">[{{ error }}] <br> </span>
         {% endfor %}
-
+		{% for error in restrForm.conField.errors %}
+            <span style="color: red;">[{{ error }}] <br> </span>
+        {% endfor %}
+		{% for error in nameForm.name.errors %}
+            <span style="color: red;">[{{ error }}] <br> </span>
+        {% endfor %}
+		
+		
 		{% if lost %}
-		<h3> <b> You lost! The player was {{ answer }}. Press 'submit' to reset and play again. </b> </h3>
+		<h3> <b> You lost! The player was {{ answer }}. </b> </h3>
 
 		{% elif found %}
-		<h3> <b> Congratulations! You guessed the player {{ answer }} in {{guesses|length}} guesses. Press 'submit' to reset and play again. </b> </h3>
+		<h3> <b> Congratulations! You guessed the player {{ answer }} in {{guesses|length}} guesses. </b> </h3>
 		{% endif %}
 
 
@@ -76,4 +112,3 @@
 		</div>
     </form>
 {% endblock %}
-

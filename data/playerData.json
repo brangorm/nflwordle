@@ -1,4 +1,34 @@
 [
+	{
+        "2PT": "1",
+        "FanPtsAgainst-pts": "29.91",
+        "Fum": "",
+        "FumTD": "",
+        "PassingInt": "",
+        "PassingTD": "",
+        "PassingYDS": "",
+        "PlayerId": "2557898",
+        "PlayerName": "JaQuan Hardy",
+        "Pos": "RB",
+        "Rank": 1,
+        "ReceivingRec": "145",
+        "ReceivingTD": "16",
+        "ReceivingYDS": "0",
+        "ReceptionPercentage": "76",
+        "RetTD": "",
+        "RushingTD": "",
+        "RushingYDS": "29",
+        "RzG2G": "14",
+        "RzTarget": "38",
+        "RzTouch": "28",
+        "Targets": "191",
+        "TargetsReceptions": "145",
+        "Team": "LA",
+        "TotalPoints": "368.70",
+        "TouchCarries": "4",
+        "TouchReceptions": "145",
+        "Touches": "149"
+    },
     {
         "2PT": "1",
         "FanPtsAgainst-pts": "29.91",
@@ -1737,7 +1767,7 @@
         "TotalPoints": "100.10",
         "TouchCarries": null,
         "TouchReceptions": null,
-        "Touches": null
+        "Touches": "45"
     },
     {
         "2PT": "",
@@ -2517,7 +2547,7 @@
         "TotalPoints": "72.50",
         "TouchCarries": null,
         "TouchReceptions": null,
-        "Touches": null
+        "Touches": "24"
     },
     {
         "2PT": "",
@@ -5067,7 +5097,7 @@
         "TotalPoints": "13.80",
         "TouchCarries": null,
         "TouchReceptions": null,
-        "Touches": null
+        "Touches": "4"
     },
     {
         "2PT": "",

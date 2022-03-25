@@ -1,11 +1,15 @@
 import json
 import csv
 import re
-from random import randrange
+from random import randrange, sample
 from enum import Enum
 
 fhand = open("data/pool.csv")
 players = list(csv.reader(fhand))
+feedhand = open('app/static/logs/feed.txt')
+feedhandW = open('app/static/logs/feed.txt', 'a')
+
+
 beg = 1
 end = 509
 columns = { "Rank": 0,
@@ -19,49 +23,10 @@ columns = { "Rank": 0,
 "Age" : 8,
 "Height": 9,
 "College" : 10,
-"Years in NFL" : 11
+"Years in NFL" : 11,
+"Stat" : 12
 }
 
-class Status(Enum):
-    CORRECT = 0
-    INCORRECT = 1
-    ALMOST = 2
-    TOO_HIGH = 3
-    TOO_LOW = 4
-    NA = 5
-
-def get_color(item):
-    result = item[0]
-    mappings = {"CORRECT" : "green", "INCORRECT" : "red", "ALMOST" : "yellow", "TOO_HIGH" : "orange", "TOO_LOW" : "blue", "NA" : "gray"}
-    return mappings.get(result)
-# print("Guess the random NFL player. Rules: \n" +
-    # "1. Positions: QB, WR, RB, TE \n" +
-    # "2. Scored at least 5 fantasy points in 2021 \n" +
-    # "3. Capitalization/punctuation doesn't matter, just spell the names right")
-# print("Enter difficulty. Press 0 for easy, 1 for medium, 2 for hard, and 3 for EXTREME.")
-
-# try: x = int(input())
-# except: x = 4
-
-# if x == 0:
-    # end = 128
-    # print("Easy difficulty selected.")
-# elif x == 1:
-    # beg = 128
-    # end = 200
-    # print("Medium difficulty selected.")
-# elif x == 2:
-    # beg = 201
-    # end = 300
-    # print("Hard difficulty selected.")
-# elif x == 3:
-    # beg = 301
-    # print("EXTREME difficulty selected.")
-# else:
-    # print("Including all players...")
-#files = {"WR" : "data/WR_season.json", "RB" : "data/RB_season.json", "TE" : "data/TE_season.json", "QB" : "data/QB_season.json", "K" : "data/K_season.json"}
-file = "data/playerData.json"
-playerData = json.load(open(file))
 conferences = { "NFC" : 
     ["GB", "MIN", "DET", "CHI",
     "TB", "ATL", "CAR", "NO",
@@ -76,6 +41,29 @@ conferences = { "NFC" :
     "KC", "LV", "LAC", "DEN"
     ]
 }
+
+diffs = {
+"Easy" : range(1, 76),
+"Medium" : range(30, 150),
+"Hard" : range(150, 300),
+"Extreme" : range(300, 508),
+"Include all players" : range(1, 508)
+}
+
+def hasData(restr):
+    for category in ["conField", "divField", "posField"]:
+        if (restr[category] is not None) and (restr[category] != ["All"]) and (len(restr[category]) > 0):
+            return True
+    return False
+
+def get_color(guessCategory):
+    result = guessCategory[0]
+    mappings = {"CORRECT" : "green", "INCORRECT" : "red", "ALMOST" : "yellow", "TOO_HIGH" : "orange", "TOO_LOW" : "blue", "NA" : "gray"}
+    return mappings.get(result)
+
+def clearSession(session):
+    for item in ['answer', 'isHard', 'guesses', 'found']:
+        if item in session: session.pop(item)
 
 def isHardPlayer(player):
     i = 0
@@ -105,30 +93,49 @@ def getDiv(team):
     else: div = "West"
     return conf + " " + div
     
-# data = list()
-# for file in files.values():
-    # fhand = open(file)
-    # data.extend(json.load(fhand))
-
-# open("data/playerData.json", "w").write(json.dumps(data, indent=4, sort_keys=True))
-
 def std(string):
     string = string.replace(" III", "").replace(" II", "").replace(" IV", "").replace(" Jr.", "").replace(" Sr.", "").replace("Scott Miller", "Scotty Miller").replace("Michael Badgley", "Mike Badgley")
     expr = re.compile('[^a-zA-Z]')
     return expr.sub('', string).lower()
 
+def verifyRestr(pos, team, attr):
+    valid = True
+    if attr[0] == "NFC" or attr[0] == ["AFC"]:
+        if getCon(team) not in attr: valid = False
+    elif attr[0].startswith("NFC") or attr[0].startswith("AFC"):
+        if getDiv(team) not in attr: valid = False
+    else:
+        if pos not in attr: valid = False
+    #if not valid:
+        #print("Verification failed for this data: ")
+        #print(str(pos) + str(team) + str(attr))
+    return valid
+   
 
-def decide(beg, end):
-    index = randrange(beg,end)
-    row = players[index]
-    player = row[1]
-    found = False
-    for item in playerData:
-        if std(item["PlayerName"]) == std(player):
-            return item
-    if not found:
-        return decide()
-        #6 out of 509 players have weird names and are irrelevant anyway: Cedrick Wilson, Michael Badgley, Deonte Hardy, Joshua Palmer, Jody Fortson, JaQuan Hardy
+def decide(diff, restr):
+    playerPool = []
+    player = None
+    for row in players[1:]:
+        valid = True
+        pos = row[3]
+        team = row[2]
+        for category in ["conField", "divField", "posField"]:
+            if (restr.get(category) is not None) and (restr[category] != ["All"]) and (len(restr[category]) > 0):
+                if not verifyRestr(pos, team, restr[category]):
+                    valid = False
+                    break
+        if valid: playerPool.append(row[1])
+    if not playerPool:
+        print("These restrictions were invalid:")
+        print(restr)
+        return None
+    rang = len(playerPool)
+    if restr:
+        index = randrange(0,rang)
+    else:
+        index = sample(diffs[diff], 1)[0]
+    player = playerPool[index]
+    return player
 
 
 def isValidGuess(guess):
@@ -137,17 +144,14 @@ def isValidGuess(guess):
             return True
     return False
 
+def isValidRestr(restr):
+    if not decide("Easy", restr): return False
+    else: return True
+
 def getPastTeams(player):
     for row in players:
         if std(row[1]) == std(player):
             return row[7]
-    return None
-    
-def getPlayerData(player):
-    for item in playerData:
-        if std(item["PlayerName"]) == std(player):
-            return item
-    print("Could not find player " + player)
     return None
 
 def compareHeight(h1, h2):
@@ -172,25 +176,7 @@ def getCell(player, stat):
             return row[index]
     return None
 
-def receiveValidGuess():
-    print("Enter your guess: ")
-    guess = input()
-    if guess == "":
-        return "win"
-    stdGuess = std(guess)
-    if not isValidGuess(stdGuess):
-        print("Not a valid player")
-        return receiveValidGuess()
-    return guess
-
-def do_guess(answerData, guessData):
-    answer = answerData["PlayerName"]
-    guess = ""
-    try:
-        guess = guessData["PlayerName"]
-    except:
-        return None#print("THIS IS AN ERROR. YOUR PLAYER'S NAME HAS ANOTHER INTERPRETATION. TRY IT.")
-    
+def do_guess(answer, guess):
     data = {
     "Found" : False,
     "Name" : guess,
@@ -204,8 +190,11 @@ def do_guess(answerData, guessData):
     "College" : ["NA", "N/A"]
     }
     
-    answerTeam = getTeam(answer)
-    guessTeam = getTeam(guess)
+    answerPos = getCell(answer, "Position")
+    guessPos = getCell(guess, "Position")
+    
+    answerTeam = getCell(answer, "Team")
+    guessTeam = getCell(guess, "Team")
     
     answerConf = getCon(answerTeam)
     guessConf = getCon(guessTeam)
@@ -213,13 +202,13 @@ def do_guess(answerData, guessData):
     answerDiv = getDiv(answerTeam)
     guessDiv = getDiv(guessTeam)
     
-    answerPast = getPastTeams(answer).split(",")
+    answerPast = getCell(answer, "Teams").split(",")
     
     answerAge = getCell(answer, "Age")
     guessAge = getCell(guess, "Age")
     
-    answerHeight = getCell(answer, "Height")
-    guessHeight = getCell(guess, "Height")
+    answerHeight = getCell(answer, "Height").strip()
+    guessHeight = getCell(guess, "Height").strip()
     
     answerCollege = getCell(answer, "College")
     guessCollege = getCell(guess, "College")
@@ -227,53 +216,56 @@ def do_guess(answerData, guessData):
     answerYears = getCell(answer, "Years in NFL")
     guessYears = getCell(guess, "Years in NFL")
     
-    if answerData["PlayerName"] == guessData["PlayerName"]:
+    answerStat = getCell(answer, "Stat")
+    guessStat = getCell(guess, "Stat")
+    
+    if std(answer) == std(guess):
         data["Found"] = True
-    if answerData["Pos"] != guessData["Pos"]:
-        data["Position"] = ["INCORRECT", guessData["Pos"]]
-    if answerData["Pos"] == guessData["Pos"]:
-        data["Position"] = ["CORRECT", guessData["Pos"]]
+    if answerPos != guessPos:
+        data["Position"] = ["INCORRECT", guessPos]
+    if answerPos == guessPos:
+        data["Position"] = ["CORRECT", guessPos]
         
-        pos = answerData["Pos"]
+        pos = answerPos
         if pos == "QB":
-            if float(answerData["PassingYDS"]) > float(guessData["PassingYDS"]):
-                data["Stat"] = ["TOO_LOW", guessData["PassingYDS"], "Passing Yds."]
-            elif float(answerData["PassingYDS"]) < float(guessData["PassingYDS"]):
-                data["Stat"] = ["TOO_HIGH", guessData["PassingYDS"], "Passing Yds."]
+            if float(answerStat) > float(guessStat):
+                data["Stat"] = ["TOO_LOW", guessStat, "Passing Yds."]
+            elif float(answerStat) < float(guessStat):
+                data["Stat"] = ["TOO_HIGH", guessStat, "Passing Yds."]
             else:
-                data["Stat"] = ["CORRECT", guessData["PassingYDS"], "Passing Yds."]
+                data["Stat"] = ["CORRECT", guessStat, "Passing Yds."]
         
         elif pos == "WR":
-            if float(answerData["ReceivingYDS"]) > float(guessData["ReceivingYDS"]):
-                data["Stat"] = ["TOO_LOW", guessData["ReceivingYDS"], "Receiving Yds."]
-            elif float(answerData["ReceivingYDS"]) < float(guessData["ReceivingYDS"]):
-                data["Stat"] = ["TOO_HIGH", guessData["ReceivingYDS"], "Receiving Yds."]
+            if float(answerStat) > float(guessStat):
+                data["Stat"] = ["TOO_LOW", guessStat, "Receiving Yds."]
+            elif float(answerStat) < float(guessStat):
+                data["Stat"] = ["TOO_HIGH", guessStat, "Receiving Yds."]
             else:
-                data["Stat"] = ["CORRECT", guessData["ReceivingYDS"], "Receiving Yds."]
+                data["Stat"] = ["CORRECT", guessStat, "Receiving Yds."]
                 
         elif pos == "RB":
-            if float(answerData["RushingYDS"]) > float(guessData["RushingYDS"]):
-                data["Stat"] = ["TOO_LOW", guessData["RushingYDS"], "Rushing Yds."]
-            elif float(answerData["RushingYDS"]) < float(guessData["RushingYDS"]):
-                data["Stat"] = ["TOO_HIGH", guessData["RushingYDS"], "Rushing Yds."]
+            if float(answerStat) > float(guessStat):
+                data["Stat"] = ["TOO_LOW", guessStat, "Rushing Yds."]
+            elif float(answerStat) < float(guessStat):
+                data["Stat"] = ["TOO_HIGH", guessStat, "Rushing Yds."]
             else:
-                data["Stat"] = ["CORRECT", guessData["RushingYDS"], "Rushing Yds."]
+                data["Stat"] = ["CORRECT", guessStat, "Rushing Yds."]
                 
         elif pos == "TE":
-            if float(answerData["ReceivingYDS"]) > float(guessData["ReceivingYDS"]):
-                data["Stat"] = ["TOO_LOW", guessData["ReceivingYDS"], "Receiving Yds."]
-            elif float(answerData["ReceivingYDS"]) < float(guessData["ReceivingYDS"]):
-                data["Stat"] = ["TOO_HIGH", guessData["ReceivingYDS"], "Receiving Yds."]
+            if float(answerStat) > float(guessStat):
+                data["Stat"] = ["TOO_LOW", guessStat, "Receiving Yds."]
+            elif float(answerStat) < float(guessStat):
+                data["Stat"] = ["TOO_HIGH", guessStat, "Receiving Yds."]
             else:
-                data["Stat"] = ["CORRECT", guessData["ReceivingYDS"], "Receiving Yds."]
+                data["Stat"] = ["CORRECT", guessStat, "Receiving Yds."]
         
         elif pos == "K":
-            if float(answerData["TotalPoints"]) > float(guessData["TotalPoints"]):
-                data["Stat"] = ["TOO_LOW", guessData["TotalPoints"], "Fantasy Pts."]
-            elif float(answerData["TotalPoints"]) < float(guessData["TotalPoints"]):
-                data["Stat"] = ["TOO_HIGH", guessData["TotalPoints"], "Fantasy Pts."]
+            if float(answerStat) > float(guessStat):
+                data["Stat"] = ["TOO_LOW", guessStat, "Fantasy Pts."]
+            elif float(answerStat) < float(guessStat):
+                data["Stat"] = ["TOO_HIGH", guessStat, "Fantasy Pts."]
             else:
-                data["Stat"] = ["CORRECT", guessData["TotalPoints"], "Fantasy Pts."]
+                data["Stat"] = ["CORRECT", guessStat, "Fantasy Pts."]
         
         
         
@@ -316,6 +308,7 @@ def do_guess(answerData, guessData):
     
     return data
     
+# Schema:
 # answerData = decide()
 # found = False
 # guesses = 0
@@ -330,12 +323,3 @@ def do_guess(answerData, guessData):
     # found = do_guess(answerData, guessData)
 
 # print("You got it in " + str(guesses) + " guesses")
-
-
-
-
-#print(playerData)
-
-
-
-#print(json.dumps(data, indent=4, sort_keys=True))
