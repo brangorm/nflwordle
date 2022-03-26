@@ -226,48 +226,21 @@ def do_guess(answer, guess):
     if answerPos == guessPos:
         data["Position"] = ["CORRECT", guessPos]
         
+        mappings = {
+        "QB" : "Passing Yds.",
+        "WR" : "Receiving Yds.",
+        "RB" : "Rushing Yds.",
+        "TE" : "Receiving Yds.",
+        "K" : "Fantasy Pts."
+        }
         pos = answerPos
-        if pos == "QB":
-            if float(answerStat) > float(guessStat):
-                data["Stat"] = ["TOO_LOW", guessStat, "Passing Yds."]
-            elif float(answerStat) < float(guessStat):
-                data["Stat"] = ["TOO_HIGH", guessStat, "Passing Yds."]
-            else:
-                data["Stat"] = ["CORRECT", guessStat, "Passing Yds."]
-        
-        elif pos == "WR":
-            if float(answerStat) > float(guessStat):
-                data["Stat"] = ["TOO_LOW", guessStat, "Receiving Yds."]
-            elif float(answerStat) < float(guessStat):
-                data["Stat"] = ["TOO_HIGH", guessStat, "Receiving Yds."]
-            else:
-                data["Stat"] = ["CORRECT", guessStat, "Receiving Yds."]
-                
-        elif pos == "RB":
-            if float(answerStat) > float(guessStat):
-                data["Stat"] = ["TOO_LOW", guessStat, "Rushing Yds."]
-            elif float(answerStat) < float(guessStat):
-                data["Stat"] = ["TOO_HIGH", guessStat, "Rushing Yds."]
-            else:
-                data["Stat"] = ["CORRECT", guessStat, "Rushing Yds."]
-                
-        elif pos == "TE":
-            if float(answerStat) > float(guessStat):
-                data["Stat"] = ["TOO_LOW", guessStat, "Receiving Yds."]
-            elif float(answerStat) < float(guessStat):
-                data["Stat"] = ["TOO_HIGH", guessStat, "Receiving Yds."]
-            else:
-                data["Stat"] = ["CORRECT", guessStat, "Receiving Yds."]
-        
-        elif pos == "K":
-            if float(answerStat) > float(guessStat):
-                data["Stat"] = ["TOO_LOW", guessStat, "Fantasy Pts."]
-            elif float(answerStat) < float(guessStat):
-                data["Stat"] = ["TOO_HIGH", guessStat, "Fantasy Pts."]
-            else:
-                data["Stat"] = ["CORRECT", guessStat, "Fantasy Pts."]
-        
-        
+        label = mappings.get(pos)
+        if float(answerStat) > float(guessStat):
+            data["Stat"] = ["TOO_LOW", guessStat, label]
+        elif float(answerStat) < float(guessStat):
+            data["Stat"] = ["TOO_HIGH", guessStat, label]
+        else:
+            data["Stat"] = ["CORRECT", guessStat, label]   
         
     if answerTeam == guessTeam:
         data["Team"] = ["CORRECT", guessTeam]
