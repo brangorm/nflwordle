@@ -115,14 +115,6 @@ def play():
                 #print("LOST!")
                 lost = True
                 guesses=[]
-                if 'name' in session:
-                    feedStr = session['name'] + " failed to guess " + session['answer'] + " after 6 guesses.\n"
-                    print("Writing feed string: " + feedStr)
-                    #feedhandW.write(feedStr)
-                    u = User(name=session['name'], player=session['answer'], guesses=len(session['guesses']), won=False)
-                    db.session.add(u)
-                    db.session.commit()
-                    feed = genFeed()
             else: guesses = session.get('guesses')
             answer=session.get('answer')
             clearSession(session)
