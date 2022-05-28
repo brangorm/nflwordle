@@ -3,6 +3,7 @@ import csv
 import re
 from random import randrange, sample
 from enum import Enum
+from profanity_check import predict, predict_prob
 
 fhand = open("data/pool.csv")
 players = list(csv.reader(fhand))
@@ -49,6 +50,9 @@ diffs = {
 "Extreme" : range(300, 508),
 "Include all players" : range(1, 508)
 }
+
+def isProfanity(name):
+    return predict([name])[0]
 
 def hasData(restr):
     for category in ["conField", "divField", "posField"]:

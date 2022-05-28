@@ -5,7 +5,7 @@ import os
 from random import randrange
 import csv
 from app.forms import LoginForm, GuessForm, DifficultyForm, RestrForm, NameForm
-from wordle import do_guess, decide, std, get_color, isHardPlayer, hasData, clearSession, feedhandW
+from wordle import do_guess, decide, std, get_color, isHardPlayer, hasData, clearSession, feedhandW, isProfanity
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -57,7 +57,12 @@ def play():
     feed = genFeed()
     name_submit = nameForm.assign.data and nameForm.validate()
     if name_submit:
-        session['name'] = nameForm.name.data
+        name = nameForm.name.data
+        if not isProfanity(name):
+            session['name'] = nameForm.name.data
+            name_submit = "Valid"
+        else:
+            name_submit = "Invalid"
     
     if restrForm: print("Data is " + str(restrForm.apply.data))
     
@@ -76,8 +81,8 @@ def play():
     print(answer)
     
     #If the guess form's Submit button was submitted but the validation failed
-    if form.submit.data and not form.validate():
-        flash(form.errors)
+    #if form.submit.data and not form.validate():
+        #flash(form.errors)
         #print("I sense that the guess-submit button was pressed, but the validation may have failed. here is its status: " + str(form.validate()))
     
     #If the guess form's Submit button was submitted and validation passed:

@@ -32,7 +32,9 @@
 		<div> {{ nameForm.name.label }} <br>
 		{{ nameForm.name() }} <br>
 		{{ nameForm.assign() }}</div>
-		{% if name_submit %} <div> Name submitted! </div> {% endif %}
+		{% if name_submit == "Valid" %} <div> Name submitted! </div>
+		{% elif name_submit == "Invalid" %} <div> Error: Invalid name. </div>
+		{% endif %}
 		
 		{% for score in feed %}
 		<div> {{ score }} </div> <br>
